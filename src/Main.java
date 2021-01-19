@@ -1,7 +1,21 @@
 import  java.util.*;
 public class Main {
     public static void main(String[] args) {
+        /*
+        Address a = new Address("balaji nagar","visakhapatnam","AP");
+        System.out.println(a.getAddressDetails());
+        a.updateAddressDetails("Ambedkar Nagar@visakhapatnam@AP");
+        System.out.println(a.getAddressDetails());
+        a.updateAddressDetails("arilova","visakhapatnam","AP");
+        System.out.println(a.getAddressDetails());
 
+        Contact c = new Contact("suhail","7075052521","suhailsqm@gmail.com");
+        System.out.println(c.getContactDetails());
+        c.setContactDetails("shakeel@9704617009@shakeel88taj@gmail.com");
+        System.out.println(c.getContactDetails());
+        c.setContactDetails("sakeena","9899878799","sakeenassb@gmail.com");
+        System.out.println(c.getContactDetails());
+*/
         Flight f = new Flight(92,"Air India",250,3);
         System.out.println(f.getFlightDetails());
         System.out.println(f.checkAvailability());
