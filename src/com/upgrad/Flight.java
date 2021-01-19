@@ -1,5 +1,3 @@
-package com.upgrad;
-
 public class Flight {
     private int flight;
     private String airLine;

@@ -1,4 +1,3 @@
-package com.upgrad;
 import java.sql.Time;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -16,7 +15,7 @@ public class TouristTicket {
     int seatNumber;
     double costPrice;
     boolean statusCancelled;
-    Address hotelAddress;
+    String hotelAddress;
     String[] touristLocations;
 
     TouristTicket(String pnr,
@@ -29,7 +28,7 @@ public class TouristTicket {
                   int seatNumber,
                   double costPrice,
                   boolean statusCancelled,
-                  Address hotelAddress,
+                  String hotelAddress,
                   String[] touristLocations) {
         this.pnr = pnr;
         this.departureLocation = departureLocation;
@@ -73,10 +72,10 @@ public class TouristTicket {
         //durationDiff.toString();
         return  diffHours+" "+diffMinutes+" "+diffSeconds;
     }
-    public Address getHotelAddress() {
+    public String getHotelAddress() {
         return this.hotelAddress;
     }
-    public void setHotelAddress(Address address) {
+    public void setHotelAddress(String address) {
         this.hotelAddress = address;
     }
     public void addTouristLocation(String touristLocation) {
@@ -98,4 +97,5 @@ public class TouristTicket {
             }
         }
     }
+
 }

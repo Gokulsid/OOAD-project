@@ -1,4 +1,3 @@
-package com.upgrad;
 import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -19,16 +18,16 @@ public class RegularTicket {
     String specialService;
 
     RegularTicket(String pnr,
-                  String departureLocation,
-                  String destinationLocation,
-                  Flight flight,
-                  String dateTimeOfDeparture,
-                  String dateTimeOfArrival,
-                  Passenger passenger,
-                  int seatNumber,
-                  double costPrice,
-                  boolean statusCancelled,
-                  String specialService) {
+            String departureLocation,
+            String destinationLocation,
+            Flight flight,
+            String dateTimeOfDeparture,
+            String dateTimeOfArrival,
+            Passenger passenger,
+            int seatNumber,
+            double costPrice,
+            boolean statusCancelled,
+            String specialService) {
         this.pnr = pnr;
         this.departureLocation = departureLocation;
         this.destinationLocation = destinationLocation;
@@ -39,10 +38,10 @@ public class RegularTicket {
         this.seatNumber = seatNumber;
         this.costPrice = costPrice;
         this.statusCancelled = statusCancelled;
-        this. specialService = specialService;
+        this.specialService = specialService;
     }
     public boolean checkStatusCancelled() {
-        return statusCancelled;
+          return statusCancelled;
     }
     public void setStatusCancelled() {
         statusCancelled = true;
@@ -56,10 +55,10 @@ public class RegularTicket {
         Date d1 = null;
         Date d2 = null;
         try {
-            d1 = format.parse(dateDeparture);
-            d2 = format.parse(dateArrival);
-            System.out.println(d1.toString());
-            System.out.println(d2.toString());
+        d1 = format.parse(dateDeparture);
+        d2 = format.parse(dateArrival);
+        System.out.println(d1.toString());
+        System.out.println(d2.toString());
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -70,9 +69,9 @@ public class RegularTicket {
         long diffHours = diff / (60 * 60 * 1000);
 
         System.out.println(diffHours+ " "+diffMinutes+" "+diffSeconds);
-        //Time durationDiff = new Time(diff2);
+       //Time durationDiff = new Time(diff2);
 
-        return diffHours+" "+diffMinutes+" "+diffSeconds;
+       return diffHours+" "+diffMinutes+" "+diffSeconds;
     }
     public String getSpecialService() {
         return null;
@@ -80,6 +79,7 @@ public class RegularTicket {
     public void updateSpecialService(String specialService) {
         this.specialService = specialService;
     }
+
 
 
 }
